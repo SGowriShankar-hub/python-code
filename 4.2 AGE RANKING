@@ -1,0 +1,6 @@
+n=["fg","kg","mm","cm","fm"]
+a=[30,27,45,54,33]
+res=list(zip(a,n))
+res1=sorted(res,reverse=True)
+for i in range(5):
+    print("rank{}:{}-{} yrs old".format(i+1,res1[i][1],res1[i][0]))
