@@ -1,0 +1,51 @@
+col="HIT"
+class aiml:
+    dept="Artificial"
+    def set_dim(self,a,b,c,d):
+        self.m1=a
+        self.m2=b
+        self.m3=c
+        self.name=d
+    def display(self):
+        print("1.name:",self.name)
+        print("2.avg:",(self.m1+self.m2+self.m3)//3)
+        print("3.dept:",cse.dept)
+        print("4.collage:",col)
+        
+class cse:
+    dept="comp"
+    def set_dim(self,a,b,c,d):
+        self.m1=a
+        self.m2=b
+        self.m3=c
+        self.name=d
+    def display(self):
+        print("1.name:",self.name)
+        print("2.avg:",(self.m1+self.m2+self.m3)//3)
+        print("3.dept:",aiml.dept)
+        print("4.collage:",col)       
+        
+        
+s1=aiml()
+s2=aiml()
+c1=cse()
+c2=cse()
+s1.set_dim(10,20,30,"gs")
+s2.set_dim(40,50,60,"kk")
+s1.display()
+s2.display()
+c1.set_dim(23,45,36,"jagan")
+c2.set_dim(67,83,25,"hd")
+c1.display()
+c2.display()
+
+
+
+
+
+
+
+
+
+
+
