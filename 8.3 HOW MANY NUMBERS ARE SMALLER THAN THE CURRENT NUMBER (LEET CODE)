@@ -1,4 +1,13 @@
 class Solution:
-    def sortedSquares(self, nums: List[int]) -> List[int]:
-        l=[i*i for i in nums]
-        return sorted(l)
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        l=[]
+        for i in range(len(nums)):
+            c=0
+            for j in range(i,len(nums)):
+                if nums[i]==nums[j]:
+                    continue
+                else:
+                    nums[i]<nums[j]
+                    c=c+1
+                l.append(i)
+            return l
