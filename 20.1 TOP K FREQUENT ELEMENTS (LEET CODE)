@@ -1,0 +1,12 @@
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        b={}
+        c=[]
+        for i in nums:
+            b[i]=b.get(i,0)+1
+        d=dict(sorted(b.items(),key=lambda x:x[1],reverse=True))
+        for i in d:
+            if len(c)>=k:
+                break
+            c.append(i)
+        return c
