@@ -1,0 +1,18 @@
+def monkey(x,y,z):
+    hig=0
+    tim=0
+    i=1
+    while (True):
+        if hig==x or hig>x:
+            break
+        if i%2==1:
+            hig=hig+y
+            tim=tim+1
+            i=i+1
+        else:
+            hig=hig-z
+            tim=tim+1
+            i=i+1
+    print(tim)
+monkey(30,10,5)
+monkey(21,5,3)
