@@ -1,0 +1,22 @@
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        row=len(grid)
+        col=len(grid[0])
+        c=0
+        for i in range(row):
+            for j in range(col):
+                if grid[i][j]=='1':
+                    c=c+1
+                    s=[(i,j)]
+                    while(s):
+                        r,cl=s.pop()
+                        if r<0 or cl<0 or r>=row or cl>=col:
+                            continue
+                        if grid[r][cl]=='0':
+                            continue
+                        grid[r][cl]='0'
+                        s.append((r+1,cl))
+                        s.append((r-1,cl))
+                        s.append((r,cl+1))
+                        s.append((r,cl-1))
+        return c
