@@ -1,0 +1,11 @@
+class Solution:
+    def abc(self,pre,ino):
+        if not pre or not ino:
+            return None
+        root=TreeNode(pre[0])
+        mid=ino.index(pre[0])
+        root.left=self.abc(pre[1:mid+1],ino[:mid])
+        root.right=self.abc(pre[mid+1:],ino[mid+1:])
+        return root
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+        return self.abc(preorder,inorder)
